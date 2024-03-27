@@ -17,13 +17,13 @@ export default function App() {
           ))}
         </div>
         <div>
-          {carsRadio.map((value, index) => <InputRadio options={value.data} label={value.name} key={index}/>)}
-        
+          {carsRadio.map((value, index) => (
+            <InputRadio options={value.data} label={value.name} key={index} />
+          ))}
         </div>
         <InputCheckbox />
         <InputNumber />
-        
-        
+
         <TextArea />
         <InputText />
       </form>
