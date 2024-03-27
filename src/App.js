@@ -1,10 +1,9 @@
 import InputCheckbox from "./components/InputCheckbox";
-import InputNumber from "./components/InputNumber";
+import Input from "./components/Input";
 import InputRadio from "./components/InputRadio";
 import Select from "./components/Select";
 import TextArea from "./components/TextArea";
-import InputText from "./components/InputText";
-import { carsSelect, carsRadio } from "./data";
+import { carsSelect, carsRadio, carsInput } from "./data";
 
 export default function App() {
   return (
@@ -22,10 +21,15 @@ export default function App() {
           ))}
         </div>
         <InputCheckbox />
-        <InputNumber />
+        <div>
+          {carsInput.map((value, index) => (
+            <Input label={value.name} type={value.type} devise={value.devise} placeholder={value.placeholder} min={value.min} />
+          ))}
+          
+        </div>
+        
 
         <TextArea />
-        <InputText />
       </form>
     </>
   );

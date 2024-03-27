@@ -56,3 +56,18 @@ export const carsRadio = [
     data: ["oui", "non"],
   },
 ];
+
+
+export const carsInput = [{
+  
+  name: "Prix",
+  type: "number",
+  placeholder: "0",
+  min: 1,
+  devise: "DH"
+},
+{
+  name: "Titre de l'annonce",
+  type: "text",
+  placeholder: "Titre de l'annonce"
+}];
