@@ -16,3 +16,32 @@ export const carsSelect = [
       data: ["4cv", "5cv", "6cv"],
     },
   ];
+
+  export const carsRadio = [
+    {
+      name: "Type de carburant",
+      data: ["diesel", 'essence', 'electrique','LPG', 'hybride'],
+    },
+    {
+      name: "Boite de vitesse",
+      data: ["automatique", "manuelle"],
+    },
+    {
+      name: "Etat",
+      data: ["excellent", "très bon","bon", 'correct', 'endommagée', 'pour pièces','neuf'],
+    },
+    {
+      name: "Origine",
+      data: ["dédouanée", "pas encore dédouanée", "ww au Maroc", 'importée neuve'],
+    },
+    {
+      name: "Nombres de portes",
+      data: ["3", "5"],
+    },
+    {
+      name: "Première main",
+      data: ["oui", "non"],
+    },
+  ];
+
+

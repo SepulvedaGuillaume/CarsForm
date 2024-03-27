@@ -4,7 +4,7 @@ import InputRadio from "./components/InputRadio";
 import Select from "./components/Select";
 import TextArea from "./components/TextArea";
 import InputText from "./components/InputText";
-import { carsSelect } from "./data";
+import { carsSelect, carsRadio } from "./data";
 
 export default function App() {
   return (
@@ -16,9 +16,14 @@ export default function App() {
             <Select options={value.data} label={value.name} key={index} />
           ))}
         </div>
+        <div>
+          {carsRadio.map((value, index) => <InputRadio options={value.data} label={value.name} key={index}/>)}
+        
+        </div>
         <InputCheckbox />
         <InputNumber />
-        <InputRadio />
+        
+        
         <TextArea />
         <InputText />
       </form>
