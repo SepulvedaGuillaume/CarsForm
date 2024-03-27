@@ -1,9 +1,19 @@
-export default function Select({ options, label }) {
-  console.log(label);
+export default function Select({
+  handleChange,
+  options,
+  label,
+  name,
+  formData,
+}) {
   return (
     <>
       <label htmlFor={label}>{label}</label>
-      <select>
+      <select
+        name={name}
+        id={name}
+        value={formData.name}
+        onChange={handleChange}
+      >
         <option value="">Sélectionner</option>
         {options.map((option, index) => (
           <option key={index} value={option}>

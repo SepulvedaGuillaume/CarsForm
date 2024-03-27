@@ -1,18 +1,22 @@
 export const carsSelect = [
   {
-    name: "Modèles",
+    label: "Modèles",
+    name: "model",
     data: ["Ford", "Ferrari", "Fiat"],
   },
   {
-    name: "Année-modèle",
+    label: "Année-modèle",
+    name: "year",
     data: ["2022", "2023", "2024"],
   },
   {
-    name: "Kilométrage",
+    label: "Kilométrage",
+    name: "miles",
     data: ["0-5000", "5000-10000", "10000-20000"],
   },
   {
-    name: "Puissance fiscale",
+    label: "Puissance fiscale",
+    name: "fiscalEngine",
     data: ["4cv", "5cv", "6cv"],
   },
 ];
