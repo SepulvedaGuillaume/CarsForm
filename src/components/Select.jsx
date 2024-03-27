@@ -1,5 +1,5 @@
 export default function Select({
-  handleChange,
+  onChangeSelect,
   options,
   label,
   name,
@@ -12,7 +12,8 @@ export default function Select({
         name={name}
         id={name}
         value={formData.name}
-        onChange={handleChange}
+        onChange={(e) => onChangeSelect(e.target)}
+        
       >
         <option value="">Sélectionner</option>
         {options.map((option, index) => (

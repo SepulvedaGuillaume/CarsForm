@@ -12,6 +12,18 @@ export default function App() {
     year: "",
     miles: "",
     fiscalEngine: "",
+    fuel:"",
+    gearBox:"",
+    state:"",
+    origin:"",
+    doors:"",
+    firstHand:"",
+    price:"",
+    title:"",
+    description:"",
+    details:""
+
+
   });
 
   const [cars, setCars] = useState([]);
@@ -26,11 +38,22 @@ export default function App() {
       year: "",
       miles: "",
       fiscalEngine: "",
+      fuel:"",
+      gearBox:"",
+      state:"",
+      origin:"",
+      doors:"",
+      firstHand:"",
+      price:"",
+      title:"",
+      description:"",
+      details:""
     });
   };
 
-  const handleChange = (e) => {
-    const { name, checked, value } = e.target;
+  const handleChange = (target) => {
+    const {name, value, checked} = target
+    console.log(value)
     setFormData((prevState) => ({
       ...prevState,
       [name]: name === "new" ? checked : value,
@@ -43,27 +66,30 @@ export default function App() {
       {cars &&
         cars.map((car, index) => (
           <li key={index}>
-            Modèle: {car.model}, Année: {car.year}, Km: {car.miles}, CV :{" "}
-            {car.fiscalEngine}
+            Modèle: {car.model}, Année: {car.year}, Km: {car.miles}, CV: {car.fiscalEngine}, Carburant: {car.fuel}, Boite de vitesse: {car.gearBox}, Etat: {car.state}, Origine: {car.origin}, Portes: {car.doors}, Première main: {car.firstHand}
           </li>
         ))}
       <form onSubmit={handleSubmit}>
         <div>
           {carsSelect.map((value, index) => (
             <Select
-              handleChange={handleChange}
+              onChangeSelect={handleChange}
               options={value.data}
               label={value.label}
               name={value.name}
               key={index}
-              onChange={handleChange}
               formData={formData}
             />
           ))}
         </div>
         <div>
           {carsRadio.map((value, index) => (
-            <InputRadio options={value.data} label={value.name} key={index} />
+            <InputRadio 
+              options={value.data} 
+              label={value.name} 
+              key={index}
+              onChangeRadio={handleChange}
+            />
           ))}
         </div>
         <div>

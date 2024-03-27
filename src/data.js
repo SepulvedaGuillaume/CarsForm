@@ -23,15 +23,18 @@ export const carsSelect = [
 
 export const carsRadio = [
   {
-    name: "Type de carburant",
+    label: "Type de carburant",
+    name: "fuel",
     data: ["diesel", "essence", "electrique", "LPG", "hybride"],
   },
   {
-    name: "Boite de vitesse",
+    label: "Boite de vitesse",
+    name: "gearBox",
     data: ["automatique", "manuelle"],
   },
   {
-    name: "Etat",
+    label: "Etat",
+    name: "state",
     data: [
       "excellent",
       "très bon",
@@ -43,7 +46,8 @@ export const carsRadio = [
     ],
   },
   {
-    name: "Origine",
+    label: "Origine",
+    name: "origin",
     data: [
       "dédouanée",
       "pas encore dédouanée",
@@ -52,38 +56,44 @@ export const carsRadio = [
     ],
   },
   {
-    name: "Nombres de portes",
+    label: "Nombres de portes",
+    name: "doors",
     data: ["3", "5"],
   },
   {
-    name: "Première main",
+    label: "Première main",
+    name: "firstHand",
     data: ["oui", "non"],
   },
 ];
 
 export const carsInput = [
   {
-    name: "Prix",
+    label: "Prix",
+    name: "price",
     type: "number",
     placeholder: "0",
     min: 1,
     devise: "DH",
   },
   {
-    name: "Titre de l'annonce",
+    label: "Titre de l'annonce",
+    name: "title",
     type: "text",
     placeholder: "Titre de l'annonce",
   },
 ];
 
 export const carsArea = {
-  name: "Texte de l'annonce",
-  rows: 8,
+label: "Texte de l'annonce",
+name: "description",
+rows: 8,
   cols: 45,
 };
 export const carsCheck = {
-  name: "Plus de détails",
-  data: [
+label: "Plus de détails",
+name: "details",
+data: [
     "Jantes en aluminium",
     "Airbags",
     "Climatisation",
