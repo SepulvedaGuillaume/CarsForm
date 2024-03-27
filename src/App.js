@@ -23,7 +23,7 @@ export default function App() {
         <InputCheckbox />
         <div>
           {carsInput.map((value, index) => (
-            <Input label={value.name} type={value.type} devise={value.devise} placeholder={value.placeholder} min={value.min} />
+            <Input label={value.name} type={value.type} devise={value.devise} placeholder={value.placeholder} min={value.min} key={index} />
           ))}
           
         </div>
