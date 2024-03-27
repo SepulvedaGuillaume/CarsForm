@@ -57,27 +57,32 @@ export const carsRadio = [
   },
 ];
 
-
-export const carsInput = [{
-  
-  name: "Prix",
-  type: "number",
-  placeholder: "0",
-  min: 1,
-  devise: "DH"
-},
-{
-  name: "Titre de l'annonce",
-  type: "text",
-  placeholder: "Titre de l'annonce"
-}];
+export const carsInput = [
+  {
+    name: "Prix",
+    type: "number",
+    placeholder: "0",
+    min: 1,
+    devise: "DH",
+  },
+  {
+    name: "Titre de l'annonce",
+    type: "text",
+    placeholder: "Titre de l'annonce",
+  },
+];
 
 export const carsArea = {
   name: "Texte de l'annonce",
-  rows:8,
+  rows: 8,
   cols: 45,
-}
+};
 export const carsCheck = {
   name: "Plus de détails",
-  data: ["Jantes en aluminium", "Airbags","Climatisation","Système de navigation"]
-}
+  data: [
+    "Jantes en aluminium",
+    "Airbags",
+    "Climatisation",
+    "Système de navigation",
+  ],
+};
