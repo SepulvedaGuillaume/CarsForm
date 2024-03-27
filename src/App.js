@@ -3,7 +3,7 @@ import Input from "./components/Input";
 import InputRadio from "./components/InputRadio";
 import Select from "./components/Select";
 import TextArea from "./components/TextArea";
-import { carsSelect, carsRadio, carsInput } from "./data";
+import { carsSelect, carsRadio, carsInput, carsArea, carsCheck} from "./data";
 
 export default function App() {
   return (
@@ -20,7 +20,7 @@ export default function App() {
             <InputRadio options={value.data} label={value.name} key={index} />
           ))}
         </div>
-        <InputCheckbox />
+        
         <div>
           {carsInput.map((value, index) => (
             <Input label={value.name} type={value.type} devise={value.devise} placeholder={value.placeholder} min={value.min} key={index} />
@@ -28,8 +28,13 @@ export default function App() {
           
         </div>
         
-
-        <TextArea />
+        <div> 
+          <TextArea label={carsArea.name} rows={carsArea.rows} cols={carsArea.cols}/>
+        </div>
+        <div>
+          <InputCheckbox label ={carsCheck.name} options= {carsCheck.data} />
+        </div>
+       
       </form>
     </>
   );

@@ -71,3 +71,13 @@ export const carsInput = [{
   type: "text",
   placeholder: "Titre de l'annonce"
 }];
+
+export const carsArea = {
+  name: "Texte de l'annonce",
+  rows:8,
+  cols: 45,
+}
+export const carsCheck = {
+  name: "Plus de détails",
+  data: ["Jantes en aluminium", "Airbags","Climatisation","Système de navigation"]
+}

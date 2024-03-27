@@ -1,7 +1,13 @@
-export default function InputCheckbox() {
+export default function InputCheckbox({label, options}) {
   return (
     <>
-      <h4>Checkbox</h4>
+      <label>{label}</label>
+      {options.map((option, index) => (
+        <div key={index}>
+          <input type="checkbox" value={option} name={label} />
+          <label>{option}</label>
+        </div>
+      ))}
     </>
-  );
+    )
 }

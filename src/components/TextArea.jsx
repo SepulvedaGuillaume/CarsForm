@@ -1,7 +1,10 @@
-export default function TextArea() {
+export default function TextArea({label, rows, cols}) {
     return (
       <>
-        <h4>TextArea</h4>
+        <label>{label}</label>
+        <div>
+          <textarea id={label} rows = {rows} cols={cols}></textarea>
+        </div>
       </>
     );
   }
