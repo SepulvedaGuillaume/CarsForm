@@ -1,7 +1,7 @@
-export default function TextArea({ label, rows, cols, onChangeText }) {
+export default function TextArea({ label, rows, cols, onChangeText, required }) {
   return (
     <>
-      <label>{label}</label>
+      <label>{label}{required && "*"}</label>
       <div>
         <textarea
           id={label}
@@ -9,6 +9,7 @@ export default function TextArea({ label, rows, cols, onChangeText }) {
           cols={cols}
           onChange={(e) => onChangeText(e.target)}
           name={label}
+          required={required}
         ></textarea>
       </div>
     </>

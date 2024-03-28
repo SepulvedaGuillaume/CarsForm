@@ -4,19 +4,21 @@ export default function Select({
   label,
   name,
   formData,
+  required
 }) {
   return (
     <>
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={label}>{label}{required && "*"}</label>
       <select
         name={name}
         id={name}
         value={formData.name}
         onChange={(e) => onChangeSelect(e.target)}
+        required={required}
       >
         <option value="">Sélectionner</option>
         {options.map((option, index) => (
-          <option key={index} value={option}>
+          <option key={index} value={option} >
             {option}
           </option>
         ))}

@@ -22,6 +22,7 @@ export default function AddCar({
             name={value.name}
             key={index}
             formData={formData}
+            required={value.required}
           />
         ))}
       </div>
@@ -32,6 +33,7 @@ export default function AddCar({
             label={value.name}
             key={index}
             onChangeRadio={handleChange}
+            required={value.required}
           />
         ))}
       </div>
@@ -45,6 +47,7 @@ export default function AddCar({
             min={value.min}
             key={index}
             onChangeInput={handleChange}
+            required={value.required}
           />
         ))}
       </div>
@@ -54,6 +57,7 @@ export default function AddCar({
           rows={carsArea.rows}
           cols={carsArea.cols}
           onChangeText={handleChange}
+          required={carsArea.required}
         />
       </div>
       <div>
@@ -61,6 +65,7 @@ export default function AddCar({
           label={carsCheck.name}
           options={carsCheck.data}
           onChangeCheckbox={handleChange}
+          required={carsCheck.required}
         />
       </div>
       <button>Ajouter ma voiture </button>

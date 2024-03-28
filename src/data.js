@@ -3,21 +3,25 @@ export const carsSelect = [
     label: "Modèles",
     name: "model",
     data: ["Ford", "Ferrari", "Fiat"],
+    required: true
   },
   {
     label: "Année-modèle",
     name: "year",
     data: ["2022", "2023", "2024"],
+    required: true
   },
   {
     label: "Kilométrage",
     name: "miles",
     data: ["0-5000", "5000-10000", "10000-20000"],
+    required: true
   },
   {
     label: "Puissance fiscale",
     name: "fiscalEngine",
     data: ["4cv", "5cv", "6cv"],
+    required: true
   },
 ];
 
@@ -26,11 +30,13 @@ export const carsRadio = [
     label: "Type de carburant",
     name: "fuel",
     data: ["diesel", "essence", "electrique", "LPG", "hybride"],
+    required: true
   },
   {
     label: "Boite de vitesse",
     name: "gearBox",
     data: ["automatique", "manuelle"],
+    required: true
   },
   {
     label: "Etat",
@@ -44,6 +50,7 @@ export const carsRadio = [
       "pour pièces",
       "neuf",
     ],
+    required: false
   },
   {
     label: "Origine",
@@ -54,16 +61,19 @@ export const carsRadio = [
       "ww au Maroc",
       "importée neuve",
     ],
+    required: false
   },
   {
     label: "Nombres de portes",
     name: "doors",
     data: ["3", "5"],
+    required: false
   },
   {
     label: "Première main",
     name: "firstHand",
     data: ["oui", "non"],
+    required: false
   },
 ];
 
@@ -81,6 +91,7 @@ export const carsInput = [
     name: "title",
     type: "text",
     placeholder: "Titre de l'annonce",
+    required: true
   },
 ];
 
@@ -89,6 +100,7 @@ export const carsArea = {
   name: "description",
   rows: 8,
   cols: 45,
+  required: true
 };
 export const carsCheck = {
   label: "Plus de détails",
@@ -99,4 +111,5 @@ export const carsCheck = {
     "Climatisation",
     "Système de navigation",
   ],
+  required: false
 };
