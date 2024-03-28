@@ -13,7 +13,6 @@ export default function Select({
         id={name}
         value={formData.name}
         onChange={(e) => onChangeSelect(e.target)}
-        
       >
         <option value="">Sélectionner</option>
         {options.map((option, index) => (

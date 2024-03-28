@@ -85,15 +85,15 @@ export const carsInput = [
 ];
 
 export const carsArea = {
-label: "Texte de l'annonce",
-name: "description",
-rows: 8,
+  label: "Texte de l'annonce",
+  name: "description",
+  rows: 8,
   cols: 45,
 };
 export const carsCheck = {
-label: "Plus de détails",
-name: "details",
-data: [
+  label: "Plus de détails",
+  name: "details",
+  data: [
     "Jantes en aluminium",
     "Airbags",
     "Climatisation",
