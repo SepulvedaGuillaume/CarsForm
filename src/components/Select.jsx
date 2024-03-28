@@ -7,7 +7,7 @@ export default function Select({
   required
 }) {
   return (
-    <div class="margin">
+    <div className="margin">
       <label htmlFor={label}>{label}{required && <span style={{color: "red"}}> *</span>}</label>
       <select
         name={name}

@@ -4,6 +4,7 @@ import InputRadio from "./InputRadio";
 import Select from "./Select";
 import TextArea from "./TextArea";
 import { carsSelect, carsRadio, carsInput, carsArea, carsCheck } from "../data";
+import { useEffect, useState } from "react";
 
 export default function AddCar({
   handleSubmit,
@@ -11,6 +12,33 @@ export default function AddCar({
   handleChange,
   formData,
 }) {
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    // merge a new array with only required fields
+    const requiredFields = [
+      ...carsSelect.filter((value) => value.required),
+      ...carsRadio.filter((value) => value.required),
+      ...carsInput.filter((value) => value.required),
+      ...(carsArea.required ? [carsArea] : []),
+      ...(carsCheck.required ? [carsCheck] : []),
+    ];
+
+    // for each required fields return true if the fields is not empty
+    const requiredFieldsData = requiredFields.map((value) => {
+      return value.name === "details"
+        ? formData[value.name].length > 0
+        : formData[value.name] !== "";
+    });
+
+    // if all fields required are not empty set disabled to false
+    if (requiredFieldsData.every((value) => value === true)) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [formData]);
+
   return (
     <form onSubmit={handleSubmit} ref={formRef} id="form">
       <div>
@@ -74,7 +102,7 @@ export default function AddCar({
           required={carsCheck.required}
         />
       </div>
-      <button>Ajouter ma voiture </button>
+      <button disabled={disabled}>Ajouter ma voiture </button>
     </form>
   );
 }

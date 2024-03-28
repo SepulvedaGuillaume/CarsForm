@@ -9,7 +9,7 @@ export default function Input({
 }) {
   return (
     <>
-      <div class="margin">
+      <div className="margin">
         <label>{label}{required && <span style={{color: "red"}}> *</span>}</label>
         <input
           type={type}

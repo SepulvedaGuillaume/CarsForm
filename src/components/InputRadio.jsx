@@ -1,6 +1,6 @@
 export default function InputRadio({ options, label, onChangeRadio, required }) {
   return (
-    <div class="margin">
+    <div className="margin">
       <label>{label}{required && <span style={{color: "red"}}> *</span>}</label>
       {options.map((option, index) => (
         <div key={index}>
