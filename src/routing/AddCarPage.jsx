@@ -1,7 +1,9 @@
 import { useRef, useState } from "react";
 import AddCar from "../components/AddCar";
+import { useNavigate } from "react-router-dom";
 
 export default function AddCarPage() {
+  const navigate = useNavigate();
   const [cars, setCars] = useState([]);
   const formRef = useRef({});
 
@@ -10,6 +12,9 @@ export default function AddCarPage() {
     const cloneArr = [...cars];
     cloneArr.push(formData);
     setCars(cloneArr);
+    navigate("/cars", {
+      state: cloneArr
+    });
     formRef.current.reset();
   };
 
