@@ -1,7 +1,7 @@
 export default function TextArea({ label, rows, cols, onChangeText, required }) {
   return (
     <>
-      <label>{label}{required && "*"}</label>
+      <label>{label}{required && <span style={{color: "red"}}> *</span>}</label>
       <div>
         <textarea
           id={label}

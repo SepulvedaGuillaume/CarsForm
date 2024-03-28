@@ -12,8 +12,10 @@ export default function AddCar({
   formData,
 }) {
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
+    <form onSubmit={handleSubmit} ref={formRef} id="form">
       <div>
+        <h2>Détails de l'annonce</h2>
+        <div>Ajouter plus de détails sur votre annonce pour un maximum de visibilité</div>
         {carsSelect.map((value, index) => (
           <Select
             onChangeSelect={handleChange}
@@ -38,6 +40,8 @@ export default function AddCar({
         ))}
       </div>
       <div>
+        <h2>Information de l'annonce</h2>
+        <div>Une annonce avec un prix et une description bien détaillé a 10 fois plus de visibilité</div>
         {carsInput.map((value, index) => (
           <Input
             label={value.name}
@@ -61,6 +65,8 @@ export default function AddCar({
         />
       </div>
       <div>
+        <h2>Plus de détails</h2>
+        <div>Ajouter des détails supplémentaires</div>
         <InputCheckbox
           label={carsCheck.name}
           options={carsCheck.data}

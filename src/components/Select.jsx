@@ -7,8 +7,8 @@ export default function Select({
   required
 }) {
   return (
-    <>
-      <label htmlFor={label}>{label}{required && "*"}</label>
+    <div class="margin">
+      <label htmlFor={label}>{label}{required && <span style={{color: "red"}}> *</span>}</label>
       <select
         name={name}
         id={name}
@@ -23,6 +23,6 @@ export default function Select({
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 }

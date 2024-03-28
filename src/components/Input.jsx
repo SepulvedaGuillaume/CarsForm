@@ -9,8 +9,8 @@ export default function Input({
 }) {
   return (
     <>
-      <div>
-        <label>{label}{required && "*"}</label>
+      <div class="margin">
+        <label>{label}{required && <span style={{color: "red"}}> *</span>}</label>
         <input
           type={type}
           placeholder={placeholder}
@@ -19,7 +19,7 @@ export default function Input({
           onChange={(e) => onChangeInput(e.target)}
           required={required}
         />
-        {devise && <div name={devise}>{devise}</div>}
+        {devise && <span name={devise}>{devise}</span>}
       </div>
     </>
   );

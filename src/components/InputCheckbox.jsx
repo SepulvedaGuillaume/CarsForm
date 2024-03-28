@@ -1,7 +1,7 @@
 export default function InputCheckbox({ label, options, onChangeCheckbox, required }) {
   return (
-    <>
-      <label>{label}{required && "*"}</label>
+    <div class="margin">
+      <label>{label}{required && <span style={{color: "red"}}> *</span>}</label>
       {options.map((option, index) => (
         <div key={index}>
           <input
@@ -12,9 +12,9 @@ export default function InputCheckbox({ label, options, onChangeCheckbox, requir
             onChange={(e) => onChangeCheckbox(e.target)}
             required={required}
           />
-          <label htmlFor={option}>{option}</label>
+          <label id="option" htmlFor={option}>{option}</label>
         </div>
       ))}
-    </>
+    </div>
   );
 }
