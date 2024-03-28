@@ -57,10 +57,11 @@ export default function App() {
 
   const handleChange = (target) => {
     const {name, value, checked} = target
-    console.log()
+    console.log(name, value, checked)
     setFormData((prevState) => ({
       ...prevState,
-      [name]: name === "new" ? checked : value,
+      [name]: name === "details" ? checked : value,
+      
     }));
   };
 
@@ -118,7 +119,7 @@ export default function App() {
           />
         </div>
         <div>
-          <InputCheckbox label={carsCheck.name} options={carsCheck.data} onChangeText/>
+          <InputCheckbox label={carsCheck.name} options={carsCheck.data} onChangeCheckbox = {handleChange}/>
         </div>
         <button>Ajouter ma voiture </button>
       </form>
