@@ -9,19 +9,19 @@ export const carsSelect = [
     label: "Année-modèle",
     name: "year",
     data: ["2022", "2023", "2024"],
-    required: true
+    required: false
   },
   {
     label: "Kilométrage",
     name: "miles",
     data: ["0-5000", "5000-10000", "10000-20000"],
-    required: true
+    required: false
   },
   {
     label: "Puissance fiscale",
     name: "fiscalEngine",
     data: ["4cv", "5cv", "6cv"],
-    required: true
+    required: false
   },
 ];
 
@@ -30,13 +30,13 @@ export const carsRadio = [
     label: "Type de carburant",
     name: "fuel",
     data: ["diesel", "essence", "electrique", "LPG", "hybride"],
-    required: true
+    required: false
   },
   {
     label: "Boite de vitesse",
     name: "gearBox",
     data: ["automatique", "manuelle"],
-    required: true
+    required: false
   },
   {
     label: "Etat",
@@ -91,7 +91,7 @@ export const carsInput = [
     name: "title",
     type: "text",
     placeholder: "Titre de l'annonce",
-    required: true
+    required: false
   },
 ];
 
@@ -100,7 +100,7 @@ export const carsArea = {
   name: "description",
   rows: 8,
   cols: 45,
-  required: true
+  required: false
 };
 export const carsCheck = {
   label: "Plus de détails",

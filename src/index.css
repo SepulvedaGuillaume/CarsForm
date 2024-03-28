@@ -14,12 +14,34 @@ h1 {
 }
 label {
   text-transform: capitalize;
-  font-weight: bold; 
+  font-weight: bold;
 }
 #option {
   text-transform: lowercase;
-  font-weight:lighter; 
+  font-weight: lighter;
 }
-.margin{
+.margin {
   margin: 1em;
+}
+
+nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
 }
